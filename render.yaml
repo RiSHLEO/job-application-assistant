@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: job-application-assistant
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: OPENAI_API_KEY
-        sync: false
