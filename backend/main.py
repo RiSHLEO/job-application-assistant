@@ -1,7 +1,11 @@
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from models import AnalysisResponse, HealthResponse
-from analyzer import analyse_application
+try:
+    from backend.models import AnalysisResponse, HealthResponse
+    from backend.analyzer import analyse_application
+except ImportError:
+    from models import AnalysisResponse, HealthResponse
+    from analyzer import analyse_application
 import json
 
 # Create FastAPI app
