@@ -3,15 +3,11 @@ from fastapi.testclient import TestClient
 import sys
 import os
 
-# Add backend to path so we can import it
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 
 from main import app
 
-# TestClient simulates HTTP requests without running a real server
 client = TestClient(app)
-
-# ============ HEALTH TESTS ============
 
 def test_health_endpoint_returns_200():
     response = client.get("/health")
@@ -22,8 +18,6 @@ def test_health_endpoint_returns_correct_data():
     data = response.json()
     assert data["status"] == "healthy"
     assert data["version"] == "1.0.0"
-
-# ============ ANALYSE VALIDATION TESTS ============
 
 def test_analyse_rejects_non_pdf():
     response = client.post(

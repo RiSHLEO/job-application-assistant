@@ -2,7 +2,7 @@ import os
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
-from backend.utils import extract_text_from_pdf, truncate_text
+from utils import extract_text_from_pdf, truncate_text
 
 load_dotenv()
 
