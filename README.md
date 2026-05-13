@@ -1,3 +1,5 @@
+![CI](https://github.com/RiSHLEO/job-application-assistant/actions/workflows/ci.yml/badge.svg)
+
 # Job Application Assistant
 
 A production-grade AI system that analyses your CV against any job description 
