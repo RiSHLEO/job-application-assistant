@@ -4,10 +4,7 @@
 
 A production-grade AI system that analyses your CV against any job description 
 and returns a match score, skill gaps, rewritten CV sections, and a tailored 
-cover letter — all powered by GPT-3.5-turbo.
-
-**Live App:** [Click here](your-streamlit-url)  
-**API Docs:** [Swagger UI](your-render-url/docs)
+cover letter all powered by GPT-3.5-turbo.
 
 ---
 
